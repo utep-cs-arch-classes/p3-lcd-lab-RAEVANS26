@@ -4,6 +4,31 @@
 #include "lcdutils.h"
 #include "lcddraw.h"
 
+void drawSonic(u_char offc, u_char offr) {
+  u_char col = 0;
+  u_char row = 0;
+  while (row < 32) {
+    col = 0;
+    while (col < 32) {
+      if (sonic[row][col] == 0)
+	drawPixel(col + offc, row+offr, COLOR_ORANGE);
+       if (sonic[row][col] == 1)
+	drawPixel(col + offc, row+offr, COLOR_BLACK);
+       if (sonic[row][col] == 2)
+	drawPixel(col + offc, row+offr, COLOR_BLUE);
+       if (sonic[row][col] == 3)
+	drawPixel(col + offc, row+offr, COLOR_TAN);
+       if (sonic[row][col] == 4)
+	drawPixel(col + offc, row+offr, COLOR_GREEN);
+       if (sonic[row][col] == 5)
+	drawPixel(col + offc, row+offr, COLOR_RED);
+     if (sonic[row][col] == 6)
+        drawPixel(col + offc, row+offr, COLOR_WHITE);
+      col++;
+    }
+    row++;
+  }   
+}
 
 /** Draw single pixel at x,row 
  *
@@ -107,7 +132,7 @@ void drawRectOutline(u_char colMin, u_char rowMin, u_char width, u_char height,
 		     u_int colorBGR)
 {
   /**< top & bot */
-  fillRectangle(colMin, rowMin, width, 1, colorBGR);
+  fillRectangle(colMin, rowMin, width, 1, colorBGR);//edited was 1
   fillRectangle(colMin, rowMin + height, width, 1, colorBGR);
 
   /**< left & right */

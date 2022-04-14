@@ -10,6 +10,8 @@
 typedef unsigned char u_char;
 typedef unsigned int u_int;
 
+extern const unsigned int sonic[32][32];
+
 extern const unsigned char font_5x7[96][5];
 extern const unsigned char font_8x12[95][12];
 extern const unsigned int font_11x16[95][11];
