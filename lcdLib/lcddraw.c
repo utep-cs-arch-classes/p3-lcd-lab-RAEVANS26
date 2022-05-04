@@ -30,6 +30,32 @@ void drawSonic(u_char offc, u_char offr) {
   }   
 }
 
+void drawSonic2(u_char offc, u_char offr) {
+  u_char col = 0;
+  u_char row = 0;
+  while (row < 32) {
+    col = 0;
+    while (col < 32) {
+      if (sonic2[row][col] == 0)
+	drawPixel(col + offc, row+offr, COLOR_ORANGE);
+       if (sonic2[row][col] == 1)
+	drawPixel(col + offc, row+offr, COLOR_BLACK);
+       if (sonic2[row][col] == 2)
+	drawPixel(col + offc, row+offr, COLOR_BLUE);
+       if (sonic2[row][col] == 3)
+	drawPixel(col + offc, row+offr, COLOR_TAN);
+       if (sonic2[row][col] == 4)
+	drawPixel(col + offc, row+offr, COLOR_GREEN);
+       if (sonic2[row][col] == 5)
+	drawPixel(col + offc, row+offr, COLOR_RED);
+     if (sonic2[row][col] == 6)
+        drawPixel(col + offc, row+offr, COLOR_WHITE);
+      col++;
+    }
+    row++;
+  }   
+}
+
 /** Draw single pixel at x,row 
  *
  *  \param col Column to draw to

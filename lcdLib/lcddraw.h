@@ -61,6 +61,8 @@ void drawChar5x7(u_char col, u_char row, char c,
 void drawRectOutline(u_char colMin, u_char rowMin, u_char width, u_char height,
 		     u_int colorBGR);
 void drawSonic(u_char offc, u_char offr);
+void drawSonic2(u_char offc, u_char offr);
+
 #endif // included
 
 
