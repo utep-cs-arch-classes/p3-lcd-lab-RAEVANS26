@@ -11,17 +11,22 @@ void wdt_c_handler(void)
     secCount ++;
     if (switch1_down==1){
         buzzer_set_period(G);
+        curr_state=0;
+        blink_limit -= 5;
     }
     else if (switch2_down==1){
         buzzer_set_period(D);
+        curr_state=1;
     }
     else if (switch3_down==1){
         buzzer_set_period(F);
+        curr_state=2;
     }
     else if (switch4_down==1){
         buzzer_set_period(E);
+        curr_state=3;
     }
-    else if (secCount >= 75) {		/* 10/sec */
+    else if (secCount >= blink_limit) {		/* 10/sec */
     secCount = 0;
     redrawScreen = 1;
     sonicstate = !sonicstate;

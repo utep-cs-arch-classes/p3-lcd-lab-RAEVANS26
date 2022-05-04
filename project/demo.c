@@ -23,13 +23,20 @@ void main()
   clearScreen(COLOR_BLUE);
   while (1) {			/* forever */
     if (redrawScreen) {
-      redrawScreen = 0;
-      if (sonicstate){
-          drawSonic(64,64);
-      }
-      else {
-          drawSonic2(64,64);
-    }
+        redrawScreen = 0;
+        switch (curr_state){
+            case 0:
+                sonic_move();
+                break;
+            case 1:
+                draw_diamond(60,60,COLOR_RED);
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+        }
+      
     }
     P1OUT &= ~LED;	/* led off */
     or_sr(0x10);	/**< CPU OFF */
