@@ -7,11 +7,12 @@
 #include "switches.h"
 
 extern short redrawScreen;
-extern char sonicstate, curr_state, blink_limit;
-
+extern char sonicstate, curr_state, color;
+extern int blink_limit;
 /* draws an hourglass shape */
 void update_shape(void);
 void sonic_move(void);
 void draw_diamond(char center, char height, u_int shapeColor);
+void color_diamond();
 
 #endif // _DRAW_SHAPES_H_

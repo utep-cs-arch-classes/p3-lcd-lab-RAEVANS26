@@ -8,7 +8,8 @@ short velocity[2] = {3,8}, limits[2] = {screenWidth-36, screenHeight-8};
 short redrawScreen = 1;
 char sonicstate = 1;
 char curr_state = 0;
-char blink_limit = 35;
+int blink_limit = 35;
+char color =0;
 
 u_int controlFontColor = COLOR_GREEN;
 

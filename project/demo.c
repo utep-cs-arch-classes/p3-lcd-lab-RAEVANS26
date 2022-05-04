@@ -29,11 +29,13 @@ void main()
                 sonic_move();
                 break;
             case 1:
-                draw_diamond(60,60,COLOR_RED);
+                blink_limit = 250;//changes color every second
+                color_diamond();
                 break;
             case 2:
                 break;
             case 3:
+                  clearScreen(COLOR_BLACK);
                 break;
         }
       
