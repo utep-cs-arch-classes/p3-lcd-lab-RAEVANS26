@@ -18,7 +18,7 @@ extern int switches;            /* current state of switches */
 extern char switch1_down;
 extern char switch2_down;
 extern char switch3_down;
-
+extern char switch4_down;
 
 /* initializes the switches  */
 void switch_init(void);
