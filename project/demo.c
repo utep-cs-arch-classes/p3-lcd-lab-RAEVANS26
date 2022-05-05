@@ -25,7 +25,7 @@ void main()
     if (redrawScreen) {
         redrawScreen = 0;
         switch (curr_state){
-            case 0:
+            case 0:// displays sonic moving
                 sonic_move();
                 break;
             case 1:
