@@ -38,6 +38,6 @@ switch_interrupt_handler(void)
   switch2_down = (p2val & SW2) ? 0 : 1;
   switch3_down = (p2val & SW3) ? 0 : 1;
   switch4_down = (p2val & SW4) ? 0 : 1;
-  clearScreen(COLOR_BLUE);
+  clearScreen(COLOR_BLUE);// clears srceen if any switch is pushed
 }
 
