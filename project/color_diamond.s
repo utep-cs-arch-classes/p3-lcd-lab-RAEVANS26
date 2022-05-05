@@ -6,10 +6,10 @@
     .extern color
 
 jmp_table:
-    .word case0
-    .word case1
-    .word case2
-    .word case3
+    .word case0 ;red diamond
+    .word case1 ;green diamond
+    .word case2 ;gold diamond
+    .word case3 ;lime green diamond
     
     .global color_diamond
 color_diamond:
@@ -44,7 +44,7 @@ case2:
 case3:
     mov.b #60, r12
     mov.b #60, r13
-    mov.b #0x3666, r14 ;deep
+    mov.b #0x3666, r14 ;lime green
     call #draw_diamond
     mov.b #0, &color
     jmp end
