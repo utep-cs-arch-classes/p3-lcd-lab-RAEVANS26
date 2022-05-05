@@ -3,7 +3,6 @@
 #include "notes.h"
 #include "buzzer.h"
 
-/* the interupt handler for the watchdog timer */
 void wdt_c_handler(void)
 {
     static int secCount = 0;
@@ -26,7 +25,7 @@ void wdt_c_handler(void)
         buzzer_set_period(E);
         curr_state=3;
     }
-    else if (secCount >= blink_limit) {		/* 10/sec */
+    else if (secCount >= blink_limit) {		
     secCount = 0;
     redrawScreen = 1;
     sonicstate = !sonicstate;
